@@ -1,11 +1,19 @@
-
 body {
-    background-image: url('../'); /* caminho da imagem */
+    background-image: url('../assets/rosa-fundo-buque.png'); /* caminho da imagem */
     background-size: cover; /* cobre a tela toda */
     background-position: center; /* centraliza */
     background-repeat: no-repeat; /* não repete a imagem */
     background-attachment: fixed;
 }
 
+.cabecalho{
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-  
+/* .cabecalho img{
+    width: 30em;
+    height: 30em;
+} */
