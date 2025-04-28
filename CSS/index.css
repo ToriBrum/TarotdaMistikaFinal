@@ -1,0 +1,11 @@
+
+body {
+    background-image: url('../'); /* caminho da imagem */
+    background-size: cover; /* cobre a tela toda */
+    background-position: center; /* centraliza */
+    background-repeat: no-repeat; /* não repete a imagem */
+    background-attachment: fixed;
+}
+
+
+  
