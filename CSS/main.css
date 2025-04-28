@@ -2,9 +2,9 @@
 @import url('fonts.css');
 
 :root{
-    --fonte-principal: 'Tan Harmoni';
-    --fonte-secundaria: 'Nevrada Neue';
-    --fonte-menu: 'Neue Machina';
+    --fonte-principal: "Tan Harmoni";
+    --fonte-secundaria: "Nevrada Neue";
+    --fonte-menu: "Neue Machina";
     --fonte-texto: 'GlacialIndifference';
     --fonte-titulo: 'Hafontia';
     --vermelho-fundo: #2d0000;

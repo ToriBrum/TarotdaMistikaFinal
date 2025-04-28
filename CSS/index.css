@@ -1,31 +1,61 @@
-@import url(main.css);
+@import url("main.css");
 
 body {
-    background-image: url('../assets/rosa-fundo-buque.png'); /* caminho da imagem */
-    background-size: cover; /* cobre a tela toda */
-    background-position: center; /* centraliza */
-    background-repeat: no-repeat; /* não repete a imagem */
-    background-attachment: fixed;
+  background-image: url("../assets/rosa-fundo-buque.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.cabecalho{
-    background-color: rgba(0, 0, 0, .7);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.cabecalho {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
 }
 
-.cabecalho img{
-    width: 30em;
-    margin: 1.3em;
+.cabecalho img {
+  width: 27em;
+  margin: 1.3em;
+  margin-left: 0;
 }
 
 .menu__lista {
-    display: flex;
-    flex-direction: row; /* opcional, row já é o padrão do flex */
-    gap: 2rem; /* espaço entre os itens, ajusta como quiser */
-    list-style: none; /* tira as bolinhas padrão do UL */
-    padding: 0; /* tira espaçamento interno */
-    margin: 0; /* tira margem externa */
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Altere o valor abaixo para aumentar ou diminuir o espaço */
+  gap: 3.2rem; /* Exemplo: diminuindo o espaço */
+  /* gap: 5rem; */ /* Exemplo: aumentando o espaço */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--fonte-menu);
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+.botao__agendamento {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-image: url("../assets/Botao.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15em; /* Largura fixa */
+  height: 8em; /* Altura fixa */
+  line-height: 8em; /* Alinha verticalmente o texto */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  border: none;
+  font-weight: bold;
+  font-family: var(--fonte-menu);
+  margin-left: 0;
+}
