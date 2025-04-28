@@ -1,3 +1,5 @@
+@import url(main.css);
+
 body {
     background-image: url('../assets/rosa-fundo-buque.png'); /* caminho da imagem */
     background-size: cover; /* cobre a tela toda */
@@ -13,7 +15,17 @@ body {
     align-items: center;
 }
 
-/* .cabecalho img{
+.cabecalho img{
     width: 30em;
-    height: 30em;
-} */
+    margin: 1.3em;
+}
+
+.menu__lista {
+    display: flex;
+    flex-direction: row; /* opcional, row já é o padrão do flex */
+    gap: 2rem; /* espaço entre os itens, ajusta como quiser */
+    list-style: none; /* tira as bolinhas padrão do UL */
+    padding: 0; /* tira espaçamento interno */
+    margin: 0; /* tira margem externa */
+  }
+  

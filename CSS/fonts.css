@@ -1,0 +1,101 @@
+/* Hafontia Regular (Cooperative) */
+@font-face {
+  font-family: "Hafontia";
+  src: url("../fonts/Cooperative/Hafontia - Cooperative Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hafontia Bold */
+@font-face {
+  font-family: "Hafontia";
+  src: url("../fonts/Cooperative/Hafontia - Cooperative Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Hafontia Italic */
+@font-face {
+  font-family: "Hafontia";
+  src: url("../fonts/Cooperative/Hafontia - Cooperative Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Hafontia Bold Italic */
+@font-face {
+  font-family: "Hafontia";
+  src: url("../fonts/Cooperative/Hafontia - Cooperative BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* GlacialIndifference Regular */
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("../fonts/Glacial/GlacialIndifference-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* GlacialIndifference Bold */
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("../fonts/Glacial/GlacialIndifference-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* GlacialIndifference Italic */
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("../fonts/Glacial/GlacialIndifference-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Neue/NeueMachina-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/NeueMachina-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/NeueMachina-Ultrabold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Nevrada Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Nevrada_Neue.otf") format("opentype"),
+    url("../fonts/Nevrada_Neue.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tan Harmoni";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/TanHarmoni-Regular.otf") format("opentype"),
+    url("../fonts/TanHarmoni-Regular.ttf") format("truetype");
+}
