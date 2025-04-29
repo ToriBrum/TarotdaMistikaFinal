@@ -1,0 +1,17 @@
+@import url('main.css');
+
+body {
+  background-image: url("../assets/rosa-fundo-buque.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--branco);
+  font-family: var(--fonte-texto);
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+

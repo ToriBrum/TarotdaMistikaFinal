@@ -1,0 +1,32 @@
+@import url('main.css');
+
+.botao__agendamento,
+.botao__agendamento__2 {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-image: url("../assets/Botao.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  font-weight: bold;
+  font-family: var(--fonte-menu);
+  text-align: center;
+}
+
+.botao__agendamento {
+  width: 15em;
+  height: 8em;
+  line-height: 8em;
+}
+
+.botao__agendamento__2 {
+  width: 16rem;
+  height: 3rem;
+  line-height: 2.8rem;
+  font-size: 18px;
+  font-family: var(--fonte-texto);
+  text-shadow: rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.952);
+}
