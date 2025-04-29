@@ -9,6 +9,11 @@ body {
   
 }
 
+section {
+  margin-bottom: 4rem; /* ou o valor que você quiser */
+}
+
+
 .cabecalho {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
@@ -64,31 +69,139 @@ body {
 .inicio{
   background-color: rgba(0, 0, 0, 0.7);
   width: 80%;
-  margin:2% 10% 0 10%;
+  margin: 0 auto;
   font-family: var(--fonte-secundaria);
   color: var(--branco);
-  font-size: 1.875rem;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  font-size: 2rem;
   border-radius: 5rem;
 }
 
 .opcao img{
   width: 25rem;
   height: 19rem;
+  margin-left: 5rem;
 }
 
 .opcoes{
   display: flex;
   flex-direction: row;
-  gap: 7rem;
+  gap: 1rem;
 }
 
-.botoes__inicio h2{
+.inicio h2{
   margin: 5.238rem 0 3rem 0;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  text-shadow:rgba(255, 255, 255, 0.842);
 }
 
-.servicos__main{
-  margin-top: 5rem;
+.titulo__servicos{
+  font-family: var(--fonte-secundaria);
+  font-size: 1.875rem;
+  color: var(--branco);
+}
+
+.servicos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+  flex-wrap: wrap; 
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.botao__servico img{
+  height: 5rem;
+  width: 5.4rem;
+}
+
+.botao__servico {
+  background-color: var(--vermelho-escuro);
+  width: 14.55rem;
+  height: 14.55rem;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  border-radius: 1rem; /* opcional */
+}
+
+.botao__servico h3 {
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--branco);
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: balance;
+}
+
+
+.botao__agendamento__2{
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-image: url("../assets/Botao.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.952);
+  width: 16rem; /* Largura fixa */
+  height: 3rem; /* Altura fixa */
+  line-height: 2.8rem; /* Alinha verticalmente o texto */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  border: none;
+  font-weight: bold;
+  font-family: var(--fonte-texto);
+  margin-left: 0;
+  text-shadow: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+}
+
+.rodape {
+  background-color: rgba(0, 0, 0, 0.9); /* fundo escuro translúcido */
+  color: var(--branco); /* usa a variável do branco que você já definiu */
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: var(--fonte-texto); /* ou var(--fonte-secundaria) se quiser algo mais rebuscado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 4rem; /* espaço entre o conteúdo anterior */
+}
+
+.links__rodape {
+  color: var(--branco);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.links__rodape:hover {
+  color: var(--vermelho-claro); /* muda cor ao passar o mouse */
+  text-decoration: underline;
+}
+
+.rodape__direitos {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+.rodape__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
 }
