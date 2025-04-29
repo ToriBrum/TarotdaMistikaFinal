@@ -6,6 +6,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
 }
 
 .cabecalho {
@@ -58,4 +59,36 @@ body {
   font-weight: bold;
   font-family: var(--fonte-menu);
   margin-left: 0;
+}
+
+.inicio{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  margin:2% 10% 0 10%;
+  font-family: var(--fonte-secundaria);
+  color: var(--branco);
+  font-size: 1.875rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5rem;
+}
+
+.opcao img{
+  width: 25rem;
+  height: 19rem;
+}
+
+.opcoes{
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+}
+
+.botoes__inicio h2{
+  margin: 5.238rem 0 3rem 0;
+}
+
+.servicos__main{
+  margin-top: 5rem;
 }
