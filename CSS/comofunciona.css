@@ -1,0 +1,19 @@
+@import url("main.css");
+
+
+.coluna__esquerda {
+  width: 48%; /* Define a largura aproximada da coluna esquerda */
+}
+
+.coluna__direita {
+  width: 48%; /* Define a largura aproximada da coluna direita */
+}
+
+.secao__duas_colunas h2 {
+  font-size: 1.5rem; /* Exemplo de estilo para os títulos */
+  margin-bottom: 1rem;
+}
+
+.secao__duas_colunas p {
+  line-height: 1.6; /* Exemplo de estilo para os parágrafos */
+}

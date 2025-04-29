@@ -4,7 +4,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   color: var(--branco);
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   font-family: var(--fonte-texto);
   display: flex;
   flex-direction: column;
