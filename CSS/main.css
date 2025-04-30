@@ -8,6 +8,8 @@
 @import url("servicos.css");
 @import url("comofunciona.css");
 @import url("sobre.css");
+@import url("agendamento.css");
+@import url("depoimento.css");
 
 :root {
   --fonte-principal: "Tan Harmoni";

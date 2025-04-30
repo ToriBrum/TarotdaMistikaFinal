@@ -1,0 +1,116 @@
+@import url("main.css");
+
+/* Centraliza a section inteira */
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: var(--branco);
+  font-family: var(--fonte-menu);
+}
+
+/* Título */
+.contato h2 {
+  font-family: var(--fonte-secundaria);
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow:2px 2px 4px rgba(255, 255, 255, 0.842);
+}
+
+/* Form container */
+form {
+  background-color: rgba(45, 0, 0, 0.79);
+  border-radius: 36px;
+  padding: 4rem;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+}
+
+/* Grid dos lados */
+.form-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Lado esquerdo menor */
+.form-left {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Lado direito maior */
+.form-right {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Grupos */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ddd;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Botão imagem personalizado */
+.enviar {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 3rem;
+  align-self: center;
+}
+
+.enviar img {
+  width: 20rem; /* Ajuste conforme o tamanho da sua imagem */
+  height: auto;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Responsivo (mobile) */
+@media (max-width: 768px) {
+  .form-content {
+    flex-direction: column;
+  }
+
+  .form-left,
+  .form-right {
+    flex: 1 1 100%;
+  }
+}

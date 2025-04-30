@@ -41,7 +41,9 @@
           <li class="menu__item">
             <a class="menu__link" href="./depoimentos.html">Depoimentos</a>
           </li>
-          <li class="menu__item"><a class="menu__link" href="./agendamento.html">Contato</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="./agendamento.html">Contato</a>
+          </li>
           <li class="menu__item">
             <a class="botao__agendamento" href="#">Agende aqui</a>
           </li>
@@ -49,39 +51,46 @@
       </nav>
     </header>
     <main>
-      <section class="leitura">
-        <div class="coluna">
-          <h2>COMO FUNCIONAM MINHAS LEITURAS?</h2>
-          <p>
-            Cada leitura é um mergulho. Aqui, não há espaço para
-            superficialidades — minha abordagem une a profundidade do
-            autoconhecimento, a precisão das técnicas e a sensibilidade da
-            intuição.
-          </p>
-          <p>
-            Mais do que prever, eu ajudo você a compreender, refletir e agir. A
-            espiritualidade está presente, mas sempre aliada à clareza, à
-            responsabilidade e ao respeito com o seu momento.
-          </p>
-        </div>
+      <section class="contato">
+        <form action="https://formsubmit.co/victoria.brum.14@gmail.com" method="POST">
+          <h2>Entre em contato</h2>
+          <div class="form-content">
+            <div class="form-left">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="text" id="whatsapp" name="whatsapp" />
+              </div>
+              <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto">
+                  <option value="consulta">Consulta</option>
+                  <option value="duvida">Dúvida</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+            </div>
 
-        <div class="coluna">
-          <h2>ORÁCULOS QUE UTILIZO:</h2>
-          <p>
-            <strong>Baralho de Maria Padilha</strong> → Um oráculo direto,
-            certeiro e espiritualizado. Ele revela influências ocultas, expõe
-            verdades e traz caminhos práticos para a vida, sempre com a presença
-            e a força de Pombagira.
-          </p>
-          <p>
-            <strong>Tarot e outros oráculos</strong> → Trabalho com uma leitura
-            técnica e simbólica, unindo Tarot, psicanálise e espiritualidade
-            para mapear padrões, decisões e aprendizados.
-          </p>
-        </div>
+            <div class="form-right">
+              <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit" class="enviar">
+                  <img src="../assets/botao-enviar.svg" alt="Enviar" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </section>
     </main>
-
     <footer class="rodape">
       <div class="rodape__links">
         <a class="links__rodape" href="#">Políticas e Regras</a>
