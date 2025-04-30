@@ -6,28 +6,35 @@
   margin-bottom: 0;
 }
 
-.texto__servicos{
+.texto__servicos {
   font-family: var(--fonte-texto);
   font-size: 19px;
   text-align: center;
   padding: 0 8rem 2.3rem 6rem;
 }
 
+.cartas__servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de igual largura */
+  gap: 1rem; /* Define o espaçamento entre as colunas e linhas */
+  padding: 0 2rem; /* Adiciona um pouco de espaço nas laterais, se necessário */
+}
+
 .cartas__servicos img {
-  width: 20rem;
-  height: 14rem;
+  width: 100%; /* Faz a imagem ocupar toda a largura da célula da grade */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 .cartas__exclusivo {
   width: 40rem;
   height: 25rem;
-  margin-left: 15rem;
+  margin-left: 1rem;
 }
 
 .inicio {
   background-color: var(--vermelho-fundo);
   width: 80%;
-  margin: 0 auto;
+  margin: 3% auto 0 auto;
   font-family: var(--fonte-secundaria);
   color: var(--branco);
   text-align: center;
@@ -36,7 +43,7 @@
   padding-bottom: 1.6rem;
 }
 
-.rosa-decorativa {
+/* .rosa-decorativa {
   position: absolute;
   width: 250px;
   height: auto;
@@ -90,4 +97,4 @@
 .rosa-bottom-left5 {
   bottom: -183.6rem;
   left: 4rem;
-}
+} */

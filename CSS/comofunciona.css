@@ -1,19 +1,37 @@
 @import url("main.css");
 
-
-.coluna__esquerda {
-  width: 48%; /* Define a largura aproximada da coluna esquerda */
+.inicio{
+  display: flex;
+  flex-direction: row; /* Alinha os filhos horizontalmente */
+  align-items: flex-start; /* Alinha os itens ao topo (opcional) */
+  gap: 2rem; /* Espaçamento entre os blocos */
+  text-align: center; /* Centraliza o texto dentro da seção (pode ser removido ou ajustado) */
 }
 
-.coluna__direita {
-  width: 48%; /* Define a largura aproximada da coluna direita */
+.bloco1, .bloco2 {
+  background-color: rgba(77, 2, 2, 0.68);
+  padding: 2rem;
+  border-radius: 36px;
+  flex: 1;
+  min-width: 300px;
 }
 
-.secao__duas_colunas h2 {
-  font-size: 1.5rem; /* Exemplo de estilo para os títulos */
-  margin-bottom: 1rem;
+.bloco1 h2,
+.bloco2 h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
 }
 
-.secao__duas_colunas p {
-  line-height: 1.6; /* Exemplo de estilo para os parágrafos */
+
+.bloco1 p,
+.bloco2 p {
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+  text-align: left;
 }
