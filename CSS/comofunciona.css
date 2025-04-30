@@ -1,19 +1,41 @@
 @import url("main.css");
 
-
-.coluna__esquerda {
-  width: 48%; /* Define a largura aproximada da coluna esquerda */
+.leitura {
+  background-color: rgba(45, 0, 0, .53);
+  border-radius: 36px;
+  display: flex;
+  justify-content: center; /* centraliza as duas colunas na horizontal */
+  gap: 3rem; /* espaço entre as colunas */
+  flex-wrap: wrap; /* responsivo: empilha se a tela for pequena */
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.coluna__direita {
-  width: 48%; /* Define a largura aproximada da coluna direita */
+.coluna {
+  flex: 1 1 40%; /* ocupa cerca de 40% cada, mas permite ajuste em telas pequenas */
+  min-width: 300px; /* impede de ficar estreito demais */
+  max-width: 500px;
+  background-color: rgba(77,2,2, .68);
+  padding: 2rem;
+  border-radius: 36px;
 }
 
-.secao__duas_colunas h2 {
-  font-size: 1.5rem; /* Exemplo de estilo para os títulos */
+.coluna h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-family: var(--fonte-titulo);
+  text-shadow:2px 2px 4px rgba(255, 255, 255, 0.842);
+}
+
+.coluna p {
+  text-align: left;
   margin-bottom: 1rem;
+  line-height: 1.6; /* deixa o texto mais confortável */
+  font-family: var(--fonte-texto);
 }
 
-.secao__duas_colunas p {
-  line-height: 1.6; /* Exemplo de estilo para os parágrafos */
+strong{
+  font-weight: bold;
 }
