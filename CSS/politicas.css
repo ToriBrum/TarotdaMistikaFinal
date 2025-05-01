@@ -1,41 +1,91 @@
 @import url("main.css");
 
-.leitura {
-  background-color: rgba(45, 0, 0, .53);
+/* ------------- INÍCIO DO CSS ------------- */
+
+/* COR COMENTADA (estava desativada) */
+/* section {
+    background-color: rgba(77, 2, 2, 0.68);  /* fundo vinho translúcido */
+
+
+.politicas {
+  /* background-color: rgba(77, 2, 2, 0.68);  fundo vinho translúcido */
   border-radius: 36px;
-  display: flex;
-  justify-content: center; /* centraliza as duas colunas na horizontal */
-  gap: 3rem; /* espaço entre as colunas */
-  flex-wrap: wrap; /* responsivo: empilha se a tela for pequena */
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
 }
 
+.politicas h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-family: var(--fonte-secundaria);
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.842);  sombra branca no texto */
+}
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
 .coluna {
-  flex: 1 1 40%; /* ocupa cerca de 40% cada, mas permite ajuste em telas pequenas */
-  min-width: 300px; /* impede de ficar estreito demais */
+  flex: 1 1 40%;
+  min-width: 300px;
   max-width: 500px;
-  background-color: rgba(77,2,2, .68);
   padding: 2rem;
   border-radius: 36px;
 }
 
-.coluna h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.coluna h3 {
+  margin-bottom: 2rem;
   font-size: 2rem;
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.842);  sombra branca no título */
   font-family: var(--fonte-titulo);
-  text-shadow:2px 2px 4px rgba(255, 255, 255, 0.842);
 }
 
 .coluna p {
   text-align: left;
   margin-bottom: 1rem;
-  line-height: 1.6; /* deixa o texto mais confortável */
+  line-height: 1.6;
   font-family: var(--fonte-texto);
 }
 
-strong{
-  font-weight: bold;
+.importante {
+  flex: 1 1 30%;
+  min-width: 250px;
+  max-width: 400px;
+  /* background-color: #4d0202;  fundo vinho escuro */
+  padding: 2rem;
+  border-radius: 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.importante__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  /* color: #fff;  texto branco */
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.842);  sombra branca no título */
+  margin-bottom: 1rem;
+}
+
+.importante__texto {
+  font-family: var(--fonte-menu);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5;
+  /* color: #fff;  texto branco */
+  margin-bottom: 1rem;
+}
+
+.importante__imagem {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* ------------- FIM DO CSS ------------- */
