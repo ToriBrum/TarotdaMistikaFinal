@@ -1,0 +1,66 @@
+/* @import url("main.css");
+
+.carrossel-politicas {
+  width: 80%;
+  margin: 3% auto;
+  text-align: center;
+  padding: 0;
+}
+
+.carrossel-politicas h2 {
+  font-family: var(--fonte-secundaria);
+  font-size: 2.5rem;
+  color: var(--branco);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.842);
+  padding: 2rem;
+}
+
+.swiper {
+  border-radius: 36px;
+  background-color: rgba(255, 0, 0, 0.68);
+}
+
+.swiper-slide {
+  font-family: var(--fonte-texto);
+  font-size: 1.2rem;
+  color: var(--branco);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5rem;
+  box-sizing: border-box;
+  margin: 3rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--branco);
+}
+
+.swiper-pagination-bullet {
+  background: var(--branco);
+}
+
+.card__footer {
+  position: absolute;
+  bottom: -2rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
+  color: var(--cinza);
+  padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  .carrossel-politicas h2 {
+    font-size: 2rem;
+  }
+
+  .swiper {
+    padding: 1rem;
+  }
+
+  .swiper-slide {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+} */
