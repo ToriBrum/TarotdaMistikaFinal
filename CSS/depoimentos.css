@@ -1,66 +1,85 @@
-/* @import url("main.css");
+@import url("main.css");
 
-.carrossel-politicas {
-  width: 80%;
-  margin: 3% auto;
+.feedback-highlight-1 {
   text-align: center;
-  padding: 0;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #000000, #860000);
+  color: #fff;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 65rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
-.carrossel-politicas h2 {
+.feedback-highlight-1 h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
   font-family: var(--fonte-secundaria);
-  font-size: 2.5rem;
-  color: var(--branco);
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.842);
+}
+
+.feedback-card-1 {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  margin: 1rem 12rem 3rem;
+}
+
+.feedback-card-1 p{
+  font-family: var(--fonte-menu);
+  font-size: 1rem ;
+  font-weight: lighter;
+}
+
+.feedback-card-1 footer {
+  margin-top: 1.4rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.feedback-card-1 blockquote {
+  position: relative;
+  font-style: italic;
   padding: 2rem;
 }
 
-.swiper {
-  border-radius: 36px;
-  background-color: rgba(255, 0, 0, 0.68);
-}
-
-.swiper-slide {
-  font-family: var(--fonte-texto);
-  font-size: 1.2rem;
-  color: var(--branco);
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 5rem;
-  box-sizing: border-box;
-  margin: 3rem;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--branco);
-}
-
-.swiper-pagination-bullet {
-  background: var(--branco);
-}
-
-.card__footer {
+.feedback-card-1 blockquote::before,
+.feedback-card-1 blockquote::after {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 6rem;
+  line-height: 1;
+  font-family: serif;
   position: absolute;
-  bottom: -2rem;
-  right: 0.5rem;
-  font-size: 2rem;
-  font-family: var(--fonte-principal);
-  color: var(--cinza);
-  padding: 2rem;
 }
 
-@media (max-width: 600px) {
-  .carrossel-politicas h2 {
-    font-size: 2rem;
-  }
+.feedback-card-1 blockquote::before {
+  content: "“";
+  top: -20px;
+  left: -10px;
+}
 
-  .swiper {
-    padding: 1rem;
-  }
+.feedback-card-1 blockquote::after {
+  content: "”";
+  bottom: -20px;
+  right: -10px;
+  transform: scaleY(-1);
+}
 
-  .swiper-slide {
-    font-size: 1rem;
-    padding: 1rem;
+
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-} */
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
