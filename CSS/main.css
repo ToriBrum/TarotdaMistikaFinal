@@ -11,6 +11,8 @@
 @import url("agendamento.css");
 @import url("depoimentos.css");
 @import url("politicas.css");
+@import url("perguntadodia.css");
+@import url("cartadodia.css");
 
 :root {
   --fonte-principal: "Tan Harmoni";

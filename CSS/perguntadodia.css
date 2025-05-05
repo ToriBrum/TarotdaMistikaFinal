@@ -1,0 +1,47 @@
+@import url("main.css");
+
+.ask-box {
+  margin: 3% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ask-box h2{
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.ask-box img {
+  width: 23rem;
+  height: auto;
+  margin-top: 0;
+}
+
+.ask-box input[type="text"] {
+  padding: 0.5rem;
+  width: 60%;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: var(--fonte-titulo);
+}
+
+.response {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.botao-revelar {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.botao-revelar img {
+  height: auto;
+  display: block;
+  width: 20rem;
+  max-width: 400px;
+}
