@@ -6,22 +6,50 @@
   margin-bottom: 0;
 }
 
-.texto__servicos{
+.texto__servicos {
   font-family: var(--fonte-texto);
   font-size: 19px;
   text-align: center;
   padding: 0 8rem 2.3rem 6rem;
 }
 
+/* Estilos de tamanho específicos para cada seção */
 .cartas__servicos img {
   width: 20rem;
   height: 14rem;
+  display: block;
 }
 
-.cartas__exclusivo {
-  width: 40rem;
-  height: 25rem;
-  margin-left: 15rem;
+.cartas__feiticos img {
+  width: 13.063rem; /* Mantenha os valores originais, se forem diferentes */
+  height: 19.813rem; /* Mantenha os valores originais, se forem diferentes */
+  display: block;
+}
+
+.cartas__exclusivo img {
+  width: 38rem; /* Mantenha os valores originais, se forem diferentes */
+  height: 23rem; /* Mantenha os valores originais, se forem diferentes */
+  display: block;
+}
+
+/* Estilos para os links */
+.cartas__servicos a,
+.cartas__feiticos a,
+.cartas__exclusivo a {
+  display: inline-block;
+}
+
+/* Estilos de hover específicos */
+.cartas__servicos img.card:hover,
+.cartas__feiticos img.card2:hover,
+.cartas__exclusivo img.card2:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card,
+.card2 {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
 }
 
 .inicio {
@@ -36,58 +64,4 @@
   padding-bottom: 1.6rem;
 }
 
-.rosa-decorativa {
-  position: absolute;
-  width: 250px;
-  height: auto;
-  z-index: 999;
-  pointer-events: none;
-}
-
-.rosa-top-right {
-  top: 9rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left {
-  bottom: -14rem;
-  left: 4rem;
-}
-
-.rosa-top-right2 {
-  top: 52rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left2 {
-  bottom: -62rem;
-  left: 4rem;
-}
-
-.rosa-top-right3 {
-  top: 100rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left3 {
-  bottom: -105rem;
-  left: 4rem;
-}
-.rosa-top-right4 {
-  top: 143rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left4 {
-  bottom: -144rem;
-  left: 4rem;
-}
-.rosa-top-right5 {
-  top: 182rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left5 {
-  bottom: -183.6rem;
-  left: 4rem;
-}
+/* Removi os estilos de rosa por enquanto, para focar na correção do layout */

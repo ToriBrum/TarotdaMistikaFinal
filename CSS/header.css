@@ -30,3 +30,8 @@
   text-decoration: none;
   color: var(--branco);
 }
+
+.menu__link:hover{
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.692);
+  border-bottom: solid var(--branco);
+}

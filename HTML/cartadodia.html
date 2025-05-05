@@ -45,18 +45,43 @@
             <a class="menu__link" href="./agendamento.html">Contato</a>
           </li>
           <li class="menu__item">
-            <a class="botao__agendamento" href="https://maapp.com.br/tarotdamistika">Agende aqui</a>
+            <a
+              class="botao__agendamento"
+              href="https://maapp.com.br/tarotdamistika"
+              >Agende aqui</a
+            >
           </li>
         </ul>
       </nav>
     </header>
     <main>
+      <section class="inicio">
+        <h2>Carta do Dia</h2>
+    
+        <div class="card" id="dailyCard">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../assets/verso-carta.png" alt="Verso da carta" />
+            </div>
+            <div class="card-back">
+              <img id="cardImage" src="" alt="Carta revelada" />
+            </div>
+          </div>
+        </div>
+    
+        <p id="cardMessage" class="card-message"></p>
+    
+      </section>
     </main>
+    
+
     <footer class="rodape">
       <div class="rodape__links">
         <a class="links__rodape" href="./politicas.html">Políticas e Regras</a>
         <a class="links__rodape" href="./agendamento.html">Contatos</a>
-        <a class="links__rodape" href="./pagamentos.html">Formas de Pagamento</a>
+        <a class="links__rodape" href="./pagamentos.html"
+          >Formas de Pagamento</a
+        >
       </div>
       <p class="rodape__direitos">
         Tarot da Místika &copy; Todos os direitos reservados - Criado por:
@@ -115,4 +140,5 @@
       class="rosa-decorativa rosa-bottom-left5"
     /> -->
   </body>
+  <script src="../JS/cartadodia.js"></script>
 </html>

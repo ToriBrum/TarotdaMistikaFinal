@@ -1,1 +1,79 @@
-@import url('main.css')
+@import url("main.css");
+
+/* === CARD ESTILO === */
+.card {
+  width: 200px;
+  height: 320px;
+  margin: 0 auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Flip na carta */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Verso da carta (frente visível primeiro) */
+.card-front {
+  background-color: #000;
+}
+
+/* Frente da carta revelada */
+.card-back {
+  background-color: #000;
+  transform: rotateY(180deg);
+}
+
+/* Texto abaixo da carta */
+.card-message {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-family: var(--fonte-destaque);
+  color: var(--branco);
+  margin-top: 2rem;
+  background-color: var(--vermelho-destaque);
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 36px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* === HOVER LINDO === */
+.card:hover .card-inner {
+  transform: scale(1.05) rotateZ(1deg);
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #ffffff, 0 0 40px #640008; /* Roxo místico */
+  transition: box-shadow 0.3s ease-in-out;
+}

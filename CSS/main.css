@@ -13,6 +13,7 @@
 @import url("politicas.css");
 @import url("perguntadodia.css");
 @import url("cartadodia.css");
+@import url("pagamento.css");
 
 :root {
   --fonte-principal: "Tan Harmoni";
