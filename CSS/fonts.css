@@ -1,83 +1,97 @@
-/* Hafontia Regular (Cooperative) */
+/* ===== Hafontia ===== */
+
+/* Regular */
 @font-face {
   font-family: "Hafontia";
-  src: url("../fonts/Cooperative/Cooperative-Regular.otf")
-    format("truetype");
+  src: url("../fonts/Cooperative/Cooperative-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-/* Hafontia Bold */
+/* Bold (Corrija o caminho se tiver o arquivo bold real!) */
 @font-face {
   font-family: "Hafontia";
-  src: url("../fonts/Cooperative/Cooperative-Regular.otf")
-    format("truetype");
+  src: url("../fonts/Cooperative/Cooperative-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
-/* GlacialIndifference Regular */
+/* ===== Glacial Indifference ===== */
+
+/* Regular */
 @font-face {
   font-family: "GlacialIndifference";
   src: url("../fonts/Glacial/GlacialIndifference-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-/* GlacialIndifference Bold */
+/* Bold */
 @font-face {
   font-family: "GlacialIndifference";
   src: url("../fonts/Glacial/GlacialIndifference-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
-/* GlacialIndifference Italic */
+/* Italic */
 @font-face {
   font-family: "GlacialIndifference";
   src: url("../fonts/Glacial/GlacialIndifference-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
+/* ===== Neue Machina ===== */
+
+/* Light */
 @font-face {
   font-family: "Neue Machina";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
   src: url("../fonts/Neue/NeueMachina-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* Regular */
 @font-face {
   font-family: "Neue Machina";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
   src: url("../fonts/Neue/NeueMachina-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* Ultrabold */
 @font-face {
   font-family: "Neue Machina";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
   src: url("../fonts/Neue/NeueMachina-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* ===== Nevrada Neue ===== */
 @font-face {
   font-family: "Nevrada Neue";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
   src: url("../fonts/Nevrada/Nevrada_Neue.otf") format("opentype"),
-    url("../fonts/Nevrada/Nevrada_Neue.ttf") format("truetype");
+       url("../fonts/Nevrada/Nevrada_Neue.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* ===== Tan Harmoni ===== */
 @font-face {
   font-family: "Tan Harmoni";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
   src: url("../fonts/Tan-Harmoni/TanHarmoni-Regular.otf") format("opentype"),
-  url("../fonts/Tan-Harmoni/TanHarmoni-Regular.ttf") format("truetype");
+       url("../fonts/Tan-Harmoni/TanHarmoni-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }

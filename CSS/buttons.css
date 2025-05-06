@@ -4,7 +4,7 @@
 .botao__agendamento__2 {
   display: inline-block;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--branco);
   background-image: url("../assets/Botao.svg");
   background-size: cover;
   background-position: center;
@@ -16,16 +16,16 @@
 }
 
 .botao__agendamento {
-  width: 15em;
-  height: 8em;
-  line-height: 8em;
+  width: 14rem;
+  height: 8rem;
+  line-height: 8rem;
 }
 
 .botao__agendamento__2 {
   width: 16rem;
   height: 3rem;
   line-height: 2.8rem;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: var(--fonte-texto);
   text-shadow: rgba(0, 0, 0, 0.7);
   box-shadow: rgba(0, 0, 0, 0.952);

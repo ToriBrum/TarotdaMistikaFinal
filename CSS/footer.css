@@ -1,4 +1,4 @@
-@import url('main.css');
+@import url("main.css");
 
 .rodape {
   background-color: rgba(0, 0, 0, 0.9);
@@ -11,6 +11,7 @@
   align-items: center;
   gap: 1.5rem;
   margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .rodape__links {

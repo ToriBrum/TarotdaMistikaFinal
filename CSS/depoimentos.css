@@ -4,11 +4,11 @@
   text-align: center;
   padding: 2rem 1rem;
   background: linear-gradient(135deg, #000000, #860000);
-  color: #fff;
+  color: var(--branco);
   border-radius: 1rem;
   margin: 2rem auto;
   max-width: 65rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0.938rem rgba(0, 0, 0, 0.4);
 }
 
 .feedback-highlight-1 h2 {
@@ -20,7 +20,7 @@
 .feedback-card-1 {
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 0.125rem solid rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
   backdrop-filter: blur(5px);
   animation: fadeInUp 1s ease forwards;

@@ -8,21 +8,25 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .inicio {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(45, 0, 0, 0.79);
   width: 80%;
-  margin: 0 auto;
+  margin: 3% auto;
   font-family: var(--fonte-secundaria);
   color: var(--branco);
   text-align: center;
   font-size: 2rem;
-  border-radius: 5rem;
+  border-radius: 80px;
+}
+
+.fundo{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 3rem;
 }
 
 .opcao img {
   width: 25rem;
-  height: 19rem;
+  height: auto;
   margin-left: 5rem;
 }
 
@@ -33,17 +37,19 @@ html {
 }
 
 .inicio h2 {
-  margin: 5.238rem 0 3rem 0;
+  margin: 6rem 0 3rem 0;
   text-align: center;
   padding-top: 2rem;
   font-size: 2.5rem;
-  text-shadow:2px 2px 4px rgba(255, 255, 255, 0.842);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
+  font-family: var(--fonte-secundaria);
 }
 
 .titulo__servicos {
   font-family: var(--fonte-secundaria);
   font-size: 1.875rem;
   color: var(--branco);
+  margin-top: 1rem;
 }
 
 .servicos {
@@ -54,6 +60,7 @@ html {
   margin-top: 3rem;
   text-align: center;
   margin-bottom: 3rem;
+  padding-bottom: 0;
 }
 
 .botao__servico img {
@@ -71,7 +78,6 @@ html {
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  margin-bottom: 4rem;
   border-radius: 1rem; /* opcional */
 }
 
@@ -96,7 +102,7 @@ html {
 /* Quando passa o mouse */
 .opcao img:hover{
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra pra dar aquele tchã */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); /* Sombra pra dar aquele tchã */
   z-index: 2; /* Garante que fique por cima se tiver algo perto */
 }
 
@@ -113,38 +119,7 @@ html {
 
 .botao__servico:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
 
-
-/* 
-.rosa-decorativa {
-  position: absolute;
-  width: 250px;
-  height: auto;
-  z-index: 999;
-  pointer-events: none;
-}
-
-.rosa-top-right {
-  top: 9rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left {
-  bottom: -2rem;
-  left: 4rem;
-  width: 200px;
-}
-
-.rosa-top-right2 {
-  top: 41rem;
-  right: 2rem;
-}
-
-.rosa-bottom-left2 {
-  bottom: -36rem;
-  left: 4rem;
-  width: 200px;
-} */

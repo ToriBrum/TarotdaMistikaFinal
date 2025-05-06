@@ -1,34 +1,29 @@
 @import url("main.css");
 
 .sobre {
-  background-color: rgba(45, 0, 0, 0.79);
-  margin: 3% auto;
-  font-family: var(--fonte-secundaria);
-  color: var(--branco);
   display: flex;
   flex-direction: row;
-  width: 80%;
-  border-radius: 36px;
-  padding: 2rem 0 2rem 2rem; /* Adicione um pouco de padding interno para respiro */
+  padding: 1rem; /* Adicione um pouco de padding interno para respiro */
   align-items: center; /* Alinha verticalmente os itens ao centro (opcional, mas pode ser útil) */
   justify-content: space-between; /* Distribui o espaço entre o texto e a imagem */
 }
 
 .texto {
   font-family: var(--fonte-texto);
-  font-size: 18px;
+  font-size: 1.125rem;
   width: 50%; /* Dê uma largura maior para o texto */
   text-align: left; /* Alinha o texto à esquerda */
   margin-left: 5rem;
-  padding: 2rem;
+  padding-bottom: 3rem;
   line-height: 1.9rem;
 }
 
 .texto h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-family: var(--fonte-secundaria);
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.842);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
   margin-bottom: 2rem; /* Adicione um pouco de espaço abaixo do título */
+  margin-top: 1rem;
 }
 
 .foto {
@@ -36,6 +31,7 @@
   display: flex; /* Para controlar o alinhamento da imagem dentro da div */
   justify-content: flex-end; /* Alinha a imagem à direita da div .foto */
   margin-right: 7rem;
+  align-items: center;
 }
 
 .foto img {

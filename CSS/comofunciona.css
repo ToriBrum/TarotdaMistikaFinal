@@ -9,24 +9,24 @@
   flex-wrap: wrap; /* responsivo: empilha se a tela for pequena */
   padding: 2rem;
   width: 80%;
-  margin: 0 auto;
+  margin: 3% auto;
 }
 
 .coluna {
-  flex: 1 1 40%; /* ocupa cerca de 40% cada, mas permite ajuste em telas pequenas */
-  min-width: 300px; /* impede de ficar estreito demais */
-  max-width: 500px;
-  background-color: rgba(77,2,2, .68);
+  flex: 1 1 40%;
+  min-width: 18.75rem;
+  max-width: 31.25rem;
   padding: 2rem;
-  border-radius: 36px;
+  border-radius: 2.25rem;
 }
+
 
 .coluna h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-family: var(--fonte-titulo);
-  text-shadow:2px 2px 4px rgba(255, 255, 255, 0.842);
+  text-shadow:0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
 }
 
 .coluna p {
