@@ -5,7 +5,7 @@
   display: inline-block;
   text-decoration: none;
   color: var(--branco);
-  background-image: url("../assets/Botao.svg");
+  background-image: url("/assets/Botao.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,9 +16,10 @@
 }
 
 .botao__agendamento {
-  width: 14rem;
-  height: 8rem;
-  line-height: 8rem;
+  width: 12.2rem;
+  height: 4rem;
+  line-height: 4rem;
+  margin-right: 0;
 }
 
 .botao__agendamento__2 {
@@ -29,4 +30,13 @@
   font-family: var(--fonte-texto);
   text-shadow: rgba(0, 0, 0, 0.7);
   box-shadow: rgba(0, 0, 0, 0.952);
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (max-width: 1200px) {
+  .botao__agendamento{
+    width: 12rem;
+  }
 }

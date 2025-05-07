@@ -14,4 +14,10 @@ section {
   margin-bottom: 4rem;
 }
 
+@media (max-width: 480px){
+  body{
+    background-image: url("../assets/rosa-fundo-buque-mobile.png");
+    background-attachment: scroll;
+  }
+}
 

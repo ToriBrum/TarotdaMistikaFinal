@@ -32,7 +32,7 @@ html {
 
 .opcoes {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; /* Agora ele quebra de forma controlada */
   gap: 1rem;
 }
 

@@ -1,4 +1,4 @@
-@import url('main.css');
+@import url("main.css");
 
 .cabecalho {
   background-color: rgba(0, 0, 0, 0.7);
@@ -7,6 +7,7 @@
   align-items: center;
   width: 100%;
   margin-top: 0;
+  margin-right: 0;
 }
 
 .cabecalho img {
@@ -18,7 +19,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3.2rem;
+  gap: 3rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -32,7 +33,75 @@
   color: var(--branco);
 }
 
-.menu__link:hover{
+.menu__link:hover {
   text-shadow: 0.125rem 0.125rem 0.313rem rgba(255, 255, 255, 0.692);
   border-bottom: solid var(--branco);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: var(--branco);
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  .cabecalho img {
+    width: 22rem;
+    margin: 0.8em 0;
+  }
+
+  .menu__lista {
+    font-size: 0.8rem;
+    width: fit-content;
+    gap: 3rem;
+    margin-left: 1rem;
+  }
+  
+  .menu__link{
+    margin-right:0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px){
+  .cabecalho img{
+    width: 30rem;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .cabecalho img {
+    width: 29rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .menu__lista {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6rem; /* ou ajuste conforme altura real do seu header */
+    right: 0;
+    width: 100%;
+    padding: 2rem 0;
+    gap: 2rem;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-toggle:checked + .menu-icon + .menu__lista {
+    display: flex;
+  }
 }
