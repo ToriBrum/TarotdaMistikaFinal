@@ -1,30 +1,33 @@
 @import url("main.css");
 
+/* ===== Header Principal ===== */
 .cabecalho {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: center;/* Melhor separação entre logo e menu */
   width: 100%;
-  margin-top: 0;
-  margin-right: 0;
+  margin: 0; /* reset mais elegante */
+  padding: 2rem 0; /* dá um respiro lateral */
+  gap: 3rem;
 }
 
+/* ===== Logo responsiva ===== */
 .cabecalho img {
-  width: 27em;
-  margin: 1.3em 0 1.3em 0;
+  width: 100%;
+  max-width: 25rem; /* Nunca passa de 25rem */
+  height: auto;
 }
 
+/* ===== Menu Principal ===== */
 .menu__lista {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1rem, 3vw, 3rem); /* gap responsivo */
   list-style: none;
   padding: 0;
   margin: 0;
   font-family: var(--fonte-menu);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem); /* Fonte responsiva */
   font-weight: bold;
 }
 
@@ -38,148 +41,65 @@
   border-bottom: solid var(--branco);
 }
 
-.menu-toggle {
-  display: none;
-}
-
+/* ===== Menu Hamburguer (invisível no desktop) ===== */
+.menu-toggle,
 .menu-icon {
   display: none;
-  font-size: 2rem;
-  color: var(--branco);
-  cursor: pointer;
-  margin-left: auto;
-  padding: 0.5rem;
 }
 
-
-/* ========= Responsividade: ========= */
-
-@media (max-width: 2560px){
-  .cabecalho img {
-    width: 30rem;
-    margin: 0.8em 0;
+/* ===== Mobile Styles ===== */
+@media (max-width: 1023px) {
+  /* Ativa o ícone hamburguer */
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--branco);
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0.5rem;
   }
 
-  .menu__lista {
-    font-size: 0.8rem;
-    width: fit-content;
-    gap: 3rem;
-    margin-left: 1rem;
-  }
-
-  .menu__link {
-    margin-right: 0;
-    padding: 0;
-  }
-}
-
-@media (max-width: 1200px) {
-  .cabecalho img {
-    width: 22rem;
-    margin: 0.8em 0;
-  }
-
-  .menu__lista {
-    font-size: 0.8rem;
-    width: fit-content;
-    gap: 3rem;
-    margin-left: 1rem;
-  }
-
-  .menu__link {
-    margin-right: 0;
-    padding: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .cabecalho img {
-    width: 33rem;
-  }
-
+  /* Esconde o menu principal */
   .menu__lista {
     display: none;
     flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: 6rem; /* ou ajuste conforme altura real do seu header */
+    top: 5rem;
     right: 0;
     width: 100%;
     padding: 2rem 0;
     gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.87);
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.7);
     font-size: 1rem;
+    border-radius: 0 0 30px 30px;
   }
 
-  .menu-icon {
-    display: block;
-  }
-
+  /* Quando o toggle tá checado, abre o menu */
   .menu-toggle:checked + .menu-icon + .menu__lista {
     display: flex;
   }
 }
 
+/* ===== Telas muito pequenas ===== */
 @media (max-width: 480px) {
-  
   .cabecalho img {
-    width: 29rem;
-    margin: 2rem 0 1rem;
+    max-width: 20rem; /* Reduz limite da logo pra não estourar */
   }
 
   .menu__lista {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 6rem; /* ou ajuste conforme altura real do seu header */
-    right: 0;
-    width: 100%;
-    padding: 2rem 0;
-    gap: 2rem;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 1rem;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-toggle:checked + .menu-icon + .menu__lista {
-    display: flex;
+    gap: 1.5rem; /* Gap mais compacto */
+    padding: 1.5rem 0;
   }
 }
 
 @media (max-width: 320px) {
   .cabecalho img {
-    width: 16.7rem;
-    margin: 2rem 0 1rem;
+    max-width: 16rem; /* Ainda menor no celular minusculo */
   }
 
   .menu__lista {
-    display: none;
-    flex-direction: column;
-    align-items: center; /* ISSO AQUI centraliza na horizontal */
-    justify-content: center; /* ISSO AQUI centraliza na vertical (se quiser) */
-    position: absolute;
-    top: 5.5rem;
-    right: 0;
-    width: 100%;
-    padding: 2rem 0;
-    gap: 2.5rem;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.877);
-    font-size: 1rem;
-    text-align: center; /* opcional — centraliza texto se precisar */
-    border-radius: 0 0 30px 30px; /* ordem: top-left | top-right | bottom-right | bottom-left */
-
-  }
-  
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-toggle:checked + .menu-icon + .menu__lista {
-    display: flex;
+    gap: 1rem;
   }
 }

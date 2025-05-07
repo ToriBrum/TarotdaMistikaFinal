@@ -37,6 +37,18 @@ const responses = [
 ];
 
 function askTheCards() {
+  const responseEl = document.getElementById("cardResponse");
+  
+  // Remove classe se já tiver visível (reset da animação)
+  responseEl.classList.remove('mostrar');
+
+  // Sorteia a resposta
   const index = Math.floor(Math.random() * responses.length);
-  document.getElementById("cardResponse").textContent = responses[index];
+  responseEl.textContent = responses[index];
+
+  // Força reflow pra garantir que a animação role de novo
+  void responseEl.offsetWidth; 
+
+  // Adiciona a classe que ativa o fade-up
+  responseEl.classList.add('mostrar');
 }

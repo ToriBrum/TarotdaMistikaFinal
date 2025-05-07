@@ -7,13 +7,14 @@
   margin: 0 auto;
   perspective: 62.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transition: transform 0.8s ease-in-out;
   transform-style: preserve-3d;
 }
 
@@ -30,7 +31,7 @@
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 0.938rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.938rem rgba(0, 0, 0, 0.3);
 }
 
 .card-front img,
@@ -55,17 +56,22 @@
 
 /* Texto abaixo da carta */
 .card-message {
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
   line-height: 1.6;
   font-family: var(--fonte-destaque);
   color: var(--branco);
-  margin-top: 2rem;
   background-color: var(--vermelho-destaque);
-  width: 80%;
-  margin-left: 10%;
+  padding: 0.75rem 1.5rem;
+  width: 85%;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 36px;
   box-shadow: 0.313rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
   text-shadow: 0.313rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 2rem;
 }
 
 /* === HOVER LINDO === */
@@ -76,4 +82,54 @@
 .card:hover {
   box-shadow: 0 0 1.563rem var(--branco), 0 0 2.5rem #640008; /* Roxo místico */
   transition: box-shadow 0.3s ease-in-out;
+}
+
+/* ========= Responsividade e toques finais ========= */
+
+@media (max-width: 1200px) {
+  .card {
+    width: 11rem;
+    height: 18rem;
+  }
+
+  .card-message {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 10rem;
+    height: 16rem;
+  }
+
+  .card-message {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 9rem;
+    height: 14rem;
+  }
+
+  .card-message {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 8rem;
+    height: 12rem;
+  }
+
+  .card-message {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
 }

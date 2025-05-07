@@ -1,42 +1,58 @@
 @import url("main.css");
 
+/* ====== Sessão Sobre (Layout principal com Grid) ====== */
 .sobre {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem; /* Adicione um pouco de padding interno para respiro */
-  align-items: center; /* Alinha verticalmente os itens ao centro (opcional, mas pode ser útil) */
-  justify-content: space-between; /* Distribui o espaço entre o texto e a imagem */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas iguais — texto | imagem */
+  gap: clamp(2rem, 5vw, 6rem); /* Espaço responsivo entre colunas */
+  padding: clamp(5rem, 4vw, 7rem); /* Padding responsivo */
+  align-items: center; /* Centraliza verticalmente */
 }
 
+/* ====== Texto ====== */
 .texto {
   font-family: var(--fonte-texto);
-  font-size: 1.125rem;
-  width: 50%; /* Dê uma largura maior para o texto */
-  text-align: left; /* Alinha o texto à esquerda */
-  margin-left: 5rem;
-  padding-bottom: 3rem;
-  line-height: 1.9rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem); /* Fonte responsiva */
+  line-height: 1.9; /* Melhor leitura */
+  text-align: left;
+  margin-left: 3rem;
 }
 
+/* Título dentro do texto */
 .texto h2 {
-  font-size: 2.25rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-family: var(--fonte-secundaria);
   text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
-  margin-bottom: 2rem; /* Adicione um pouco de espaço abaixo do título */
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
+/* ====== Foto ====== */
 .foto {
-  width: 40%; /* Dê uma largura para a foto */
-  display: flex; /* Para controlar o alinhamento da imagem dentro da div */
-  justify-content: flex-end; /* Alinha a imagem à direita da div .foto */
-  margin-right: 7rem;
-  align-items: center;
+  display: flex;
+  justify-content: center; /* Centraliza a foto na coluna */
 }
 
 .foto img {
-  width: auto;
-  height: auto; /* Deixe a altura se ajustar proporcionalmente */
-  max-height: 25rem; /* Defina uma altura máxima */
+  width: 100%;
+  max-width: 25rem; /* Nunca maior que 25rem */
+  height: auto;
   border-radius: 30px;
+}
+
+/* ====== Responsividade (Mobile) ====== */
+@media (max-width: 768px) {
+  .sobre {
+    grid-template-columns: 1fr; /* Empilha os elementos */
+    text-align: center; /* Centraliza texto no mobile */
+  }
+
+  .texto {
+    padding: 0; /* Remove margem que não faz sentido no mobile */
+  }
+
+  .foto {
+    margin-top: 2rem;
+  }
 }

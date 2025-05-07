@@ -25,12 +25,13 @@
   backdrop-filter: blur(5px);
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
-  margin: 1rem 12rem 3rem;
+  margin: 1rem auto 3rem;
+  max-width: 100%;
 }
 
-.feedback-card-1 p{
+.feedback-card-1 p {
   font-family: var(--fonte-menu);
-  font-size: 1rem ;
+  font-size: 1rem;
   font-weight: lighter;
 }
 
@@ -69,10 +70,6 @@
   transform: scaleY(-1);
 }
 
-
-
-
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -81,5 +78,116 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ========= Responsividade enxuta e sem bagunça ========= */
+
+@media (max-width: 1200px) {
+  .feedback-highlight-1 {
+    max-width: 90%;
+  }
+
+  .feedback-card-1 {
+    margin: 1rem 5rem 3rem;
+  }
+
+  .feedback-card-1 p {
+    font-size: 0.95rem;
+  }
+
+  .feedback-card-1 footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .feedback-highlight-1 {
+    max-width: 85%;
+  }
+
+  .feedback-card-1 {
+    margin: 1rem 3rem 3rem;
+  }
+
+  .feedback-card-1 p {
+    font-size: 1rem;
+  }
+
+  .feedback-card-1 footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-highlight-1 {
+    max-width: 95%;
+  }
+
+  .feedback-card-1 {
+    margin: 1rem 1.5rem 3rem;
+  }
+
+  .feedback-card-1 p {
+    font-size: 0.95rem;
+  }
+
+  .feedback-card-1 footer {
+    font-size: 0.85rem;
+  }
+
+  .feedback-card-1 blockquote {
+    padding: 1.5rem;
+  }
+
+  .feedback-card-1 blockquote::before,
+  .feedback-card-1 blockquote::after {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-card-1 {
+    margin: 1rem 1rem 3rem;
+  }
+
+  .feedback-card-1 p {
+    font-size: 0.9rem;
+  }
+
+  .feedback-card-1 footer {
+    font-size: 0.8rem;
+  }
+
+  .feedback-card-1 blockquote {
+    padding: 1rem;
+  }
+
+  .feedback-card-1 blockquote::before,
+  .feedback-card-1 blockquote::after {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .feedback-card-1 {
+    margin: 1rem 0.5rem 3rem;
+  }
+
+  .feedback-card-1 p {
+    font-size: 0.85rem;
+  }
+
+  .feedback-card-1 footer {
+    font-size: 0.75rem;
+  }
+
+  .feedback-card-1 blockquote {
+    padding: 1rem;
+  }
+
+  .feedback-card-1 blockquote::before,
+  .feedback-card-1 blockquote::after {
+    font-size: 2.5rem;
   }
 }

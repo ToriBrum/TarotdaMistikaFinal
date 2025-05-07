@@ -20,13 +20,12 @@
   border-radius: 2.25rem;
 }
 
-
 .coluna h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-family: var(--fonte-titulo);
-  text-shadow:0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
 }
 
 .coluna p {
@@ -36,6 +35,85 @@
   font-family: var(--fonte-texto);
 }
 
-strong{
+strong {
   font-weight: bold;
+}
+
+/* ========= Responsividade enxuta e sem bagunça ========= */
+
+@media (max-width: 1200px) {
+  .leitura {
+    width: 90%;
+  }
+
+  .coluna {
+    max-width: 45%;
+  }
+
+  .coluna h2 {
+    font-size: 1.75rem;
+  }
+
+  .coluna p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .leitura {
+    width: 85%;
+  }
+
+  .coluna {
+    max-width: 48%;
+  }
+
+  .coluna h2 {
+    font-size: 1.6rem;
+  }
+
+  .coluna p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .leitura {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .coluna {
+    max-width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .coluna h2 {
+    font-size: 1.4rem;
+  }
+
+  .coluna p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coluna h2 {
+    font-size: 1.3rem;
+  }
+
+  .coluna p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .coluna h2 {
+    font-size: 1.2rem;
+  }
+
+  .coluna p {
+    font-size: 0.85rem;
+  }
 }
