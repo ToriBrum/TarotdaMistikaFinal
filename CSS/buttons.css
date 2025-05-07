@@ -40,3 +40,22 @@
     width: 12rem;
   }
 }
+
+@media (max-width:600px){
+  .botao__agendamento__2{
+    width: 12rem;
+    height: 4rem;
+    font-size: 1rem;
+    line-height: 4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .botao__agendamento__2{
+    width: 8rem;
+    height: 2rem;
+    font-size: .8rem;
+    text-align:center;
+    line-height: 2rem;
+  }
+}

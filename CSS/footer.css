@@ -39,3 +39,64 @@
   opacity: 0.7;
   margin-top: 1rem;
 }
+
+
+@media (max-width:600px){
+  .rodape__links{
+    gap: 4rem;
+    margin-top: .7rem;
+  }
+
+  .links__rodape{
+    font-size: .8rem;
+  }
+
+  .rodape__direitos{
+    margin-bottom: .5rem;
+    font-size: .7rem;
+  }
+
+  .rodape{
+    gap: 1rem;
+  }
+}
+
+@media (max-width:480px){
+  .rodape__links{
+    gap: 2rem;
+    margin-top: .7rem;
+  }
+
+  .links__rodape{
+    font-size: .8rem;
+  }
+
+  .rodape__direitos{
+    margin-bottom: .5rem;
+    font-size: .7rem;
+  }
+
+  .rodape{
+    gap: 1rem;
+    width: 100%;
+  }
+}
+@media (max-width:320px){
+  .rodape__links{
+    gap: .5rem;
+    margin-top: .7rem;
+  }
+
+  .links__rodape{
+    font-size: .6rem;
+  }
+
+  .rodape__direitos{
+    margin-bottom: .5rem;
+    font-size: .5rem;
+  }
+
+  .rodape{
+    width: 100%;
+  }
+}

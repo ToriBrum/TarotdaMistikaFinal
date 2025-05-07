@@ -51,6 +51,28 @@
   padding: 0.5rem;
 }
 
+
+/* ========= Responsividade: ========= */
+
+@media (max-width: 2560px){
+  .cabecalho img {
+    width: 30rem;
+    margin: 0.8em 0;
+  }
+
+  .menu__lista {
+    font-size: 0.8rem;
+    width: fit-content;
+    gap: 3rem;
+    margin-left: 1rem;
+  }
+
+  .menu__link {
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .cabecalho img {
     width: 22rem;
@@ -63,21 +85,43 @@
     gap: 3rem;
     margin-left: 1rem;
   }
-  
-  .menu__link{
-    margin-right:0;
+
+  .menu__link {
+    margin-right: 0;
     padding: 0;
   }
 }
 
-@media (max-width: 600px){
-  .cabecalho img{
-    width: 30rem;
+@media (max-width: 600px) {
+  .cabecalho img {
+    width: 33rem;
   }
-  
+
+  .menu__lista {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6rem; /* ou ajuste conforme altura real do seu header */
+    right: 0;
+    width: 100%;
+    padding: 2rem 0;
+    gap: 2rem;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-toggle:checked + .menu-icon + .menu__lista {
+    display: flex;
+  }
 }
 
 @media (max-width: 480px) {
+  
   .cabecalho img {
     width: 29rem;
     margin: 2rem 0 1rem;
@@ -97,6 +141,40 @@
     font-size: 1rem;
   }
 
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-toggle:checked + .menu-icon + .menu__lista {
+    display: flex;
+  }
+}
+
+@media (max-width: 320px) {
+  .cabecalho img {
+    width: 16.7rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .menu__lista {
+    display: none;
+    flex-direction: column;
+    align-items: center; /* ISSO AQUI centraliza na horizontal */
+    justify-content: center; /* ISSO AQUI centraliza na vertical (se quiser) */
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    width: 100%;
+    padding: 2rem 0;
+    gap: 2.5rem;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.877);
+    font-size: 1rem;
+    text-align: center; /* opcional — centraliza texto se precisar */
+    border-radius: 0 0 30px 30px; /* ordem: top-left | top-right | bottom-right | bottom-left */
+
+  }
+  
   .menu-icon {
     display: block;
   }
