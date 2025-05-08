@@ -42,17 +42,20 @@
 }
 
 /* ====== Responsividade (Mobile) ====== */
-@media (max-width: 768px) {
-  .sobre {
-    grid-template-columns: 1fr; /* Empilha os elementos */
-    text-align: center; /* Centraliza texto no mobile */
-  }
+@media (max-width: 1879px) { }
 
-  .texto {
-    padding: 0; /* Remove margem que não faz sentido no mobile */
-  }
+@media (max-width: 1024px) { }
 
-  .foto {
-    margin-top: 2rem;
-  }
-}
+@media (max-width: 848px) { }
+
+@media (max-width: 662px) { }
+
+@media (max-width: 600px) { }
+
+@media (max-width: 512px) { }
+
+@media (max-width: 480px) { }
+
+@media (max-width: 412px) { }
+
+@media (max-width: 320px) { }

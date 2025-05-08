@@ -35,13 +35,25 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1879px) {
+  .botao__agendamento{
+    width: 16rem;
+  }
+}
+
+@media (max-width: 1042px){
   .botao__agendamento{
     width: 12rem;
   }
 }
 
-@media (max-width:600px){
+@media (max-width:1024px){
+  .botao__agendamento{
+    width: 9rem;
+    height: 3rem;
+    line-height: 3rem;
+  }
+
   .botao__agendamento__2{
     width: 12rem;
     height: 4rem;

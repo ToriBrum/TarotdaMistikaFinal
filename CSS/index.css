@@ -109,7 +109,6 @@ main {
 
 .botao__servico h3 {
   font-size: 1.6rem;
-  line-height: 1.3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,20 +122,75 @@ main {
 
 /* ========= Responsividade enxuta e sem bagunça ========= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1879px) {
   .opcao img {
     width: 100%;
     max-width: 22rem;
   }
+
+  .opcoes{
+    gap: 10rem;
+  }
+
+  .opcoes img{
+    max-width: 30rem;
+  }
+
+  .botoes__inicio h2{
+    font-size: 3.5rem;
+  }
+
+  .servicos{
+    gap: 10rem;
+  }
+
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .inicio h2 {
     font-size: 2rem;
   }
 
+  .opcoes img{
+    max-width: 17rem;
+  }
+
+  .opcoes{
+    gap: 5rem;
+  }
+
   .botao__servico {
     max-width: 13rem;
+    max-height: 12rem;
+    gap: 0;
+  }
+
+  .botao__servico img{
+    max-width: 4rem;
+  }
+
+  .servicos{
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 848px){
+  .opcoes img{
+    max-width: 17rem;
+  }
+}
+
+@media (max-width: 662px){
+  .opcoes img{
+    max-width: 12rem;
+  }
+
+  .opcoes{
+    gap: 3rem;
+  }
+
+  .inicio h2{
+    font-size: 1.6rem;
   }
 }
 
@@ -166,6 +220,13 @@ main {
   }
 }
 
+@media (max-width:512px){
+  .titulopadilha{
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .opcao img {
     max-width: 15rem;
@@ -178,6 +239,20 @@ main {
 
   .inicio {
     margin-left: 4rem;
+  }
+}
+
+@media (max-width: 412px){
+  .inicio{
+    margin-left: 2.7rem;
+  }
+
+  .servicos{
+    gap: 4rem;
+  }
+
+  .titulopadilha{
+    font-size: 1rem;
   }
 }
 
