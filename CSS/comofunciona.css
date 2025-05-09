@@ -154,6 +154,14 @@ strong {
   .coluna {
     padding: 0.75rem;
   }
+
+  .leitura {
+    width: 100%; /* Garante que a largura seja 100% da tela */
+    padding-left: 1.5rem; /* Mantém um pequeno padding interno */
+    padding-right: 1.5rem;
+    margin-left: 0; /* Remove margens laterais em telas muito pequenas */
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 351px) {
