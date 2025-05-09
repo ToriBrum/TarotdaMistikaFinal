@@ -1,46 +1,88 @@
 @import url("main.css");
 
+* {
+  box-sizing: border-box;
+}
+
+/* ====== Caixa geral ====== */
 .leitura {
-  background-color: rgba(45, 0, 0, .53);
+  background-color: rgba(45, 0, 0, 0.53);
   border-radius: 36px;
   display: flex;
-  justify-content: center; /* centraliza as duas colunas na horizontal */
-  gap: 3rem; /* espaço entre as colunas */
-  flex-wrap: wrap; /* responsivo: empilha se a tela for pequena */
-  padding: 2rem;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  padding: clamp(2rem, 5vw, 4rem);
   width: 80%;
   margin: 3% auto;
 }
 
+/* ====== Colunas com efeito ====== */
 .coluna {
   flex: 1 1 40%;
   min-width: 18.75rem;
   max-width: 31.25rem;
-  padding: 2rem;
-  border-radius: 2.25rem;
+  padding: clamp(1.2rem, 4vw, 2.5rem);
+  border-radius: 36px;
+  background: rgba(77, 2, 2, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(116, 1, 24, 0.3);
+  transition: all 0.3s ease;
 }
 
+.coluna:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  background: rgba(77, 2, 2, 0.3);
+}
+
+/* ====== Título ====== */
 .coluna h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-family: var(--fonte-titulo);
   text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.842);
+  letter-spacing: 0.2rem;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
+.coluna h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--vermelho-destaque),
+    transparent
+  );
+}
+
+/* ====== Texto ====== */
 .coluna p {
   text-align: left;
   margin-bottom: 1rem;
-  line-height: 1.6; /* deixa o texto mais confortável */
+  line-height: 1.6;
   font-family: var(--fonte-texto);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0.05rem;
 }
 
+/* Strong */
 strong {
   font-weight: bold;
 }
 
-/* ========= Responsividade enxuta e sem bagunça ========= */
-
+/* ====== Responsivo turbinado ====== */
 @media (max-width: 1200px) {
   .leitura {
     width: 90%;
@@ -48,14 +90,6 @@ strong {
 
   .coluna {
     max-width: 45%;
-  }
-
-  .coluna h2 {
-    font-size: 1.75rem;
-  }
-
-  .coluna p {
-    font-size: 1.1rem;
   }
 }
 
@@ -67,14 +101,6 @@ strong {
   .coluna {
     max-width: 48%;
   }
-
-  .coluna h2 {
-    font-size: 1.6rem;
-  }
-
-  .coluna p {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 600px) {
@@ -85,8 +111,8 @@ strong {
 
   .coluna {
     max-width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    min-width: auto;
+    padding: 1.2rem;
   }
 
   .coluna h2 {
@@ -106,13 +132,31 @@ strong {
   .coluna p {
     font-size: 0.9rem;
   }
+
+  .coluna {
+    padding: 1rem;
+  }
+
+  .leitura {
+    margin: 3% 3rem;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 407px) {
   .coluna h2 {
     font-size: 1.2rem;
   }
 
+  .coluna p {
+    font-size: 0.9rem;
+  }
+
+  .coluna {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 351px) {
   .coluna p {
     font-size: 0.85rem;
   }

@@ -1,33 +1,51 @@
-@import url("main.css");
-
-/* ====== Caixa geral ====== */
+/* === Caixa geral (ajustada) === */
 .ask-box {
   margin: clamp(1rem, 3%, 2rem) auto;
   display: flex;
+  flex-direction: row; /* Mantém as colunas na horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Espaço entre imagem e caixa de interação */
+  flex-wrap: wrap; /* Para telas menores */
+  max-width: 80%;
+}
+
+/* === Título === */
+.ask-box h2 {
+  margin: 3rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+
+/* === Container de Input e Botão (novo) === */
+.ask-box .input-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem; /* Menor e mais enxuto */
+  justify-content: center;
+  gap: 1rem; /* Espaço entre o input e o botão */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(116, 1, 24, 0.3); /* Borda do container */
+  background-color: rgba(77, 2, 2, 0.2); /* Fundo suave */
+  width: 100%;
 }
 
-/* ====== Título ====== */
-.ask-box h2 {
-  margin: 0;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-}
-
-/* ====== Imagem principal ====== */
+/* === Imagem principal (lado esquerdo) === */
 .ask-box img {
   width: clamp(14rem, 50vw, 20rem);
   height: auto;
-  margin: 0 auto;
+  margin: 0;
   border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efeito de sombra na imagem */
 }
 
-/* ====== Input de texto ====== */
+/* === Input de texto (lado direito) === */
 .ask-box input[type="text"] {
   padding: 0.4rem 0.6rem;
   width: clamp(70%, 80%, 60%);
-  height: 2rem;
+  height: 10rem;
   border-radius: 6px;
   border: 2px solid var(--vermelho-claro);
   font-size: clamp(1rem, 3vw, 1.2rem);
@@ -36,12 +54,13 @@
   box-shadow: none;
 }
 
+/* === Foco no input === */
 .ask-box input[type="text"]:focus {
   outline: none;
   border-color: var(--vermelho);
 }
 
-/* ====== Botão revelar (imagem clicável) ====== */
+/* === Botão revelar (imagem clicável) === */
 .botao-revelar {
   background: none;
   border: none;
@@ -62,9 +81,9 @@
   transform: scale(1.05);
 }
 
-/* ====== Resposta ====== */
+/* === Resposta (mensagem) === */
 .response {
-  margin-top: 1.5rem;
+  margin: 1.5rem 4rem 3rem;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
   color: var(--branco);
@@ -77,7 +96,6 @@
   transform: translateY(15px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   max-width: 90%;
-  margin-bottom: 3rem; /* Espaço maior na base */
 }
 
 /* Classe para ativar o fade-up */
@@ -86,7 +104,7 @@
   transform: translateY(0);
 }
 
-/* ====== Responsividade mais fina (mobile) ====== */
+/* === Responsividade mais fina (mobile) === */
 @media (max-width: 480px) {
   .ask-box input[type="text"] {
     width: 90%;

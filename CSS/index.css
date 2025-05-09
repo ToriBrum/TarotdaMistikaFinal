@@ -146,6 +146,32 @@ main {
 
 }
 
+@media (max-width: 1366px) {
+  .opcao img {
+    width: 100%;
+    max-width: 10rem;
+  }
+
+  .opcoes{
+    gap: 4rem;
+  }
+
+  .opcoes img{
+    max-width: 25rem;
+  }
+
+  .botoes__inicio h2{
+    font-size: 3rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+  }
+
+  .servicos{
+    gap: 5rem;
+  }
+
+}
+
 @media (max-width: 1024px) {
   .inicio h2 {
     font-size: 2rem;

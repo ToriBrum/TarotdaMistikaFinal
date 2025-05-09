@@ -2,12 +2,13 @@
 
 /* === CARD ESTILO === */
 .card {
-  width: 12.5rem;
-  height: 20rem;
+  width: 14rem;
+  height: 21.5rem;
   margin: 0 auto;
   perspective: 62.5rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  flex-shrink: 0; /* Deixa a carta fixinha (não estica, não deforma) */
 }
 
 .card-inner {
@@ -16,6 +17,7 @@
   height: 100%;
   transition: transform 0.8s ease-in-out;
   transform-style: preserve-3d;
+  border-radius: 20px;
 }
 
 /* Flip na carta */
@@ -29,63 +31,103 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 0.938rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  background: rgba(41, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  transition: all 0.3s ease-in-out;
 }
 
+/* Imagem das cartas */
 .card-front img,
 .card-back img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 12px;
+  border-radius: 20px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Verso da carta (frente visível primeiro) */
 .card-front {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Frente da carta revelada */
 .card-back {
-  background-color: #000;
   transform: rotateY(180deg);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Texto abaixo da carta */
-.card-message {
-  margin-top: 1.5rem;
-  margin-bottom: 4rem;
-  line-height: 1.6;
-  font-family: var(--fonte-destaque);
-  color: var(--branco);
-  background-color: var(--vermelho-destaque);
-  padding: 0.75rem 1.5rem;
-  width: 85%;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 36px;
-  box-shadow: 0.313rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
-  text-shadow: 0.313rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
-  text-align: center;
-  font-size: 2rem;
-}
-
-/* === HOVER LINDO === */
+/* === HOVER GÓTICO LUXUOSO === */
 .card:hover .card-inner {
-  transform: scale(1.05) rotateZ(1deg);
+  transform: scale(1.08) rotateZ(1deg);
 }
 
 .card:hover {
-  box-shadow: 0 0 1.563rem var(--branco), 0 0 2.5rem #640008; /* Roxo místico */
+  box-shadow: 0 0 1.2rem var(--branco), 0 0 2rem var(--vermelho-destaque);
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/* ========= Responsividade e toques finais ========= */
+.card:hover .card-front img,
+.card:hover .card-back img {
+  opacity: 1;
+}
 
+/* === Container da carta + mensagem === */
+.card-message-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Espaço entre carta e mensagem */
+  flex-wrap: wrap; /* Pra não estourar em telas pequenas */
+  margin: 2rem 15rem;
+  width: 40rem;
+}
+
+/* === Texto (mensagem) === */
+.card-message {
+  width: auto;
+  flex: 1;
+  min-width: 200px;
+  max-width: 80%; /* Aumentado pra caber mais */
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+  font-family: var(--fonte-destaque);
+  color: var(--branco);
+  background: rgba(41, 0, 0, 0.4);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border-radius: 36px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Mais espaço embaixo da seção --- */
+section.inicio {
+  padding-bottom: 5rem; /* Respiro maroto */
+}
+
+/* --- Remover a linha vermelha quando mensagem estiver vazia --- */
+#cardMessage:empty {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* ========= Responsividade ========= */
 @media (max-width: 1200px) {
   .card {
     width: 11rem;
@@ -93,7 +135,7 @@
   }
 
   .card-message {
-    width: 90%;
+    max-width: 90%;
     font-size: 0.95rem;
   }
 }
@@ -107,6 +149,17 @@
   .card-message {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-message-container {
+    flex-direction: column;
+  }
+
+  .card-message {
+    max-width: 90%;
+    font-size: 1.2rem;
   }
 }
 

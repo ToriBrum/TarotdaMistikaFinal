@@ -36,21 +36,21 @@
 
         <ul class="menu__lista">
           <li class="menu__item">
-            <a class="menu__link" href="HTML/sobre.html">Sobre mim</a>
+            <a class="menu__link" href="sobre.html">Sobre mim</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="HTML/servicos.html">Serviços</a>
+            <a class="menu__link" href="servicos.html">Serviços</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="HTML/comofunciona.html"
+            <a class="menu__link" href="comofunciona.html"
               >Como funciona</a
             >
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="HTML/depoimentos.html">Depoimentos</a>
+            <a class="menu__link" href="depoimentos.html">Depoimentos</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="HTML/agendamento.html">Contato</a>
+            <a class="menu__link" href="agendamento.html">Contato</a>
           </li>
           <li class="menu__item">
             <a
@@ -66,22 +66,30 @@
     <main>
       <section class="inicio">
         <div class="ask-box">
+          <!-- Título da Seção -->
           <h2>Pergunte às Cartas</h2>
-          <img src="../assets/tarologa-pergunta.svg" alt="" />
-          <input
-            type="text"
-            id="userQuestion"
-            placeholder="Digite sua pergunta..."
-          />
-          <br />
-          <button class="botao-revelar" onclick="askTheCards()">
-            <img src="../assets/revelar-botao.svg" alt="Revelar resposta" />
-          </button>
 
-          <div class="response" id="cardResponse"></div>
+          <div class="conteudo">
+            <!-- Imagem à esquerda -->
+            <div class="imagem">
+              <img src="../assets/tarologa-pergunta.svg" alt="Taróloga Perguntando" />
+            </div>
+
+            <!-- Caixa do prompt à direita -->
+            <div class="prompt">
+              <input type="text" id="userQuestion" placeholder="Digite sua pergunta..." />
+              <button class="botao-revelar" onclick="askTheCards()">
+                <img src="../assets/revelar-botao.svg" alt="Revelar resposta" />
+              </button>
+            </div>
+          </div>
         </div>
+    
+        <!-- Área da resposta -->
+        <div class="response" id="cardResponse"></div>
       </section>
     </main>
+    
     <footer class="rodape">
       <div class="rodape__links">
         <a class="links__rodape" href="politicas.html">Políticas e Regras</a>

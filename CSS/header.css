@@ -61,6 +61,19 @@
 
 }
 
+@media (max-width: 1366px) {
+  .cabecalho img {
+    max-width: 23rem; /* Reduz limite da logo pra não estourar */
+  }
+
+  .menu__lista {
+    gap: 3.5rem; /* Gap mais compacto */
+    padding: 1.5rem 0;
+    font-size: .9rem;
+  }
+
+}
+
 /* ===== Telas muito pequenas ===== */
 @media (max-width: 1024px) {
   .cabecalho img {

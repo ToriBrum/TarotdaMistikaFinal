@@ -40,6 +40,11 @@
     width: 16rem;
   }
 }
+@media (max-width: 1366px) {
+  .botao__agendamento{
+    width: 13rem;
+  }
+}
 
 @media (max-width: 1042px){
   .botao__agendamento{

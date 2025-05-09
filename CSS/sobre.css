@@ -1,12 +1,18 @@
 @import url("main.css");
+* {
+  box-sizing: border-box;
+}
 
 /* ====== Sessão Sobre (Layout principal com Grid) ====== */
 .sobre {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 colunas iguais — texto | imagem */
   gap: clamp(2rem, 5vw, 6rem); /* Espaço responsivo entre colunas */
-  padding: clamp(5rem, 4vw, 7rem); /* Padding responsivo */
   align-items: center; /* Centraliza verticalmente */
+  margin: 2% auto;
+  padding: 4rem clamp(1rem, 5vw, 6rem);
+  max-width: 1200px; /* Limita o container */
+  width: 100%;
 }
 
 /* ====== Texto ====== */
@@ -42,20 +48,64 @@
 }
 
 /* ====== Responsividade (Mobile) ====== */
-@media (max-width: 1879px) { }
+@media (max-width: 1024px) {
+  .foto img {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+  }
 
-@media (max-width: 1024px) { }
+  .sobre {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  
+}
 
-@media (max-width: 848px) { }
+@media (max-width: 892px) {
+  .foto img {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+  }
 
-@media (max-width: 662px) { }
+}
 
-@media (max-width: 600px) { }
+@media (max-width: 734px) {
+  .sobre {
+    display: flex;
+    flex-direction: column; /* Empilha em coluna */
+    align-items: stretch; /* Faz cada bloco ocupar a largura toda */
+    gap: 2rem; /* Espaço entre texto e imagem */
+    padding: 4rem;
+    max-width: 90%;
+  }
 
-@media (max-width: 512px) { }
+  .texto {
+    margin-left: 0; /* Tira a margem lateral que tinha no desktop */
+    text-align: left; /* Continua alinhado à esquerda (ou center se quiser mais clean) */
+  }
 
-@media (max-width: 480px) { }
+  .foto {
+    justify-content: center; /* Centraliza a imagem na horizontal */
+    align-self: center; /* Centraliza o bloco da imagem também */
+  }
 
-@media (max-width: 412px) { }
+  .foto img {
+    width: 100%;
+    max-width: 20rem; /* Controla o tamanho máximo da img */
+    height: auto;
+  }
+}
 
-@media (max-width: 320px) { }
+
+@media (max-width: 400px) {
+  .sobre h2{
+    padding: 0;
+  }
+
+  .sobre{
+    padding: 2rem;
+    margin-top: 10%;
+  }
+}
