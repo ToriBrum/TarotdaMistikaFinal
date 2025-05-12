@@ -127,6 +127,30 @@ section.inicio {
   -webkit-backdrop-filter: none;
 }
 
+@media (max-width: 600px) {
+  .card {
+    width: 9rem;
+    height: 14rem;
+  }
+
+  .card-message {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 8rem;
+    height: 12rem;
+  }
+
+  .card-message {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
+
 /* ========= Responsividade ========= */
 @media (max-width: 1200px) {
   .card {
@@ -163,26 +187,22 @@ section.inicio {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .card-message-container {
+    flex-direction: column; /* Aqui forçamos a direção para coluna */
+    align-items: center; /* Centraliza os itens na coluna */
+    margin: 2rem auto; /* Centraliza o container na tela */
+    width: 90%; /* O container ocupa mais largura em telas menores */
+  }
+
   .card {
-    width: 9rem;
-    height: 14rem;
+    margin-bottom: 2rem; /* Adiciona um espaço entre a carta e a mensagem */
+    width: 14rem; /* Mantém o tamanho original da carta ou ajuste conforme necessário */
+    height: 21.5rem;
   }
 
   .card-message {
-    font-size: 0.85rem;
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: 8rem;
-    height: 12rem;
-  }
-
-  .card-message {
-    font-size: 0.8rem;
-    padding: 0.5rem;
+    max-width: 100%; /* A mensagem pode ocupar a largura total do container agora */
+    font-size: 1.2rem;
   }
 }

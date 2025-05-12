@@ -23,7 +23,8 @@
 }
 
 .botao__agendamento__2 {
-  width: 14rem;
+  width: 100%;
+  max-width: 12rem;
   height: 4rem;
   line-height: 4rem;
   font-size: 1.125rem;
