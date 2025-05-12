@@ -115,3 +115,10 @@
     padding: 0.6rem 0.8rem;
   }
 }
+
+
+@media (max-width: 320px){
+  .inicio h2{
+    margin-bottom: 0;
+  }
+}
