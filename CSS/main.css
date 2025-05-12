@@ -28,3 +28,14 @@
   --cinza: #545454;
   --branco: #fff;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% da altura da viewport */
+  margin: 0; /* É bom resetar a margem padrão do body */
+}
+
+main {
+  flex: 1; /* Ocupa o espaço vertical restante */
+}

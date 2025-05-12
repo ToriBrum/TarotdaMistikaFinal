@@ -11,7 +11,8 @@
   flex-direction: column;
   align-items: center;
   gap: clamp(1rem, 3vw, 2rem);
-  margin-top: 4rem;
+  margin-top: 4rem; /* Mantenha essa margem para separação do conteúdo */
+  margin-bottom: 0;
 }
 
 /* Links container */

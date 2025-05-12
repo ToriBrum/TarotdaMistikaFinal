@@ -68,6 +68,15 @@
   }
 }
 
+@media (max-width: 616px) {
+  .botao__agendamento{
+    width: 6rem;
+    height: auto;
+    font-size: .4rem;
+    text-align:center;
+    line-height: 2rem;
+  }
+}
 @media (max-width: 320px) {
   .botao__agendamento__2{
     width: 8rem;

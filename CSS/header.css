@@ -4,17 +4,17 @@
 .cabecalho {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  align-items: center;/* Melhor separação entre logo e menu */
+  align-items: center; /* Melhor separação entre logo e menu */
   width: 100%;
   margin: 0; /* reset mais elegante */
   padding: 2rem 0; /* dá um respiro lateral */
   gap: 3rem;
 }
 
-/* ===== Logo responsiva ===== */
+/* ===== Logo responsiva (agora fluida e sem travas) ===== */
 .cabecalho img {
   width: 100%;
-  max-width: 25rem; /* Nunca passa de 25rem */
+  max-width: clamp(12rem, 40vw, 50rem);
   height: auto;
 }
 
@@ -50,114 +50,126 @@
 /* ===== Mobile Styles ===== */
 @media (max-width: 1879px) {
   .cabecalho img {
-    max-width: 38rem; /* Reduz limite da logo pra não estourar */
+    max-width: clamp(12rem, 35vw, 38rem);
   }
 
   .menu__lista {
-    gap: 3.7rem; /* Gap mais compacto */
+    gap: 3.7rem;
     padding: 1.5rem 0;
     font-size: 1.3rem;
   }
-
 }
 
 @media (max-width: 1366px) {
   .cabecalho img {
-    max-width: 23rem; /* Reduz limite da logo pra não estourar */
+    max-width: clamp(12rem, 30vw, 23rem);
   }
 
   .menu__lista {
-    gap: 3.5rem; /* Gap mais compacto */
+    gap: 3.5rem;
     padding: 1.5rem 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
-
 }
 
-/* ===== Telas muito pequenas ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1073px) {
   .cabecalho img {
-    max-width: 25rem; /* Reduz limite da logo pra não estourar */
+    max-width: clamp(12rem, 35vw, 25rem);
   }
 
   .menu__lista {
-    gap:1.6rem; 
+    gap: 1.6rem;
     padding: 0;
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
-  .cabecalho{
-    padding: 1rem 0 1rem;
+  .cabecalho {
+    padding: 1rem 0;
     gap: 0;
   }
 }
 
-@media (max-width: 1042px){
-  .cabecalho img{
-    max-width: 22rem;
+@media (max-width: 1042px) {
+  .cabecalho img {
+    max-width: clamp(12rem, 30vw, 22rem);
   }
 
-  .menu__lista{
-    font-size: .7rem;
+  .menu__lista {
+    font-size: 0.7rem;
     gap: 2rem;
     padding: 0;
   }
 
-  .cabecalho{
+  .cabecalho {
     gap: 0;
   }
 }
 
-@media (max-width: 856px){
-  .cabecalho img{
-    max-width: 22rem;
+@media (max-width: 856px) {
+  .cabecalho img {
+    max-width: clamp(12rem, 30vw, 22rem);
   }
 
-  .menu__lista{
-    font-size: .5rem;
+  .menu__lista {
+    font-size: 0.5rem;
     gap: 1.4rem;
     padding: 0;
   }
 
-  .cabecalho{
+  .cabecalho {
     gap: 0;
   }
 }
 
-@media (max-width: 430px) {
-    /* Ativa o ícone hamburguer */
-    .menu-icon {
-      display: block;
-      font-size: 2rem;
-      color: var(--branco);
-      cursor: pointer;
-      margin-left: auto;
-      padding: 0.5rem;
-    }
-  
-    /* Esconde o menu principal */
-    .menu__lista {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      top: 5rem;
-      right: 0;
-      width: 100%;
-      padding: 2rem 0;
-      gap: 2rem;
-      background-color: rgba(0, 0, 0, 0.87);
-      z-index: 999;
-      font-size: 1rem;
-      border-radius: 0 0 30px 30px;
-    }
-  
-    /* Quando o toggle tá checado, abre o menu */
-    .menu-toggle:checked + .menu-icon + .menu__lista {
-      display: flex;
-    }
+@media (max-width: 616px) {
+  .cabecalho img {
+    max-width: 12rem; /* Mantém o menor tamanho sem travar width */
+  }
 
-    .cabecalho img{
-      max-width: 22rem;
-    }
+  .menu__lista {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 430px) {
+  /* Ativa o ícone hamburguer */
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--branco);
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0.5rem;
+  }
+
+  /* Esconde o menu principal */
+  .menu__lista {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 80%;
+    padding: 2rem 0;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.87);
+    z-index: 999;
+    font-size: 1rem;
+    border-radius: 0 0 30px 30px;
+  }
+
+  /* Quando o toggle tá checado, abre o menu */
+  .menu-toggle:checked + .menu-icon + .menu__lista {
+    display: flex;
+  }
+
+  .cabecalho img {
+    max-width: 30rem;
+  }
+
+  .cabecalho {
+    gap: 0;
+    height: auto;
+  }
 }

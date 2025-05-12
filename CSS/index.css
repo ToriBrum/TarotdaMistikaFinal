@@ -65,20 +65,17 @@ main {
 
 .servicos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, max-content));
+  justify-content: center;
   padding: 2rem; /* espaço interno pra afastar dos cantos */
   gap: 1.5rem; /* espaço decente entre os cards */
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 3rem 0;
-  text-align: center;
 }
 
 /* === Padronização dos cards === */
 .botao__servico {
   background-color: var(--vermelho-escuro);
   width: 100%;
-  max-width: 14.55rem;
+  max-width: 17rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,7 +87,8 @@ main {
   cursor: pointer;
   flex: 1 1 14rem; /* garante flexibilidade mas tenta manter proporção */
   height: auto;
-  min-height: 20rem; /* define um piso decente (ajuste se quiser maior ou menor) */
+  min-height: 20rem; /* define um piso decente */
+  box-sizing: border-box; /* Importante para o padding não afetar a largura total */
 }
 
 .botao__servico:hover {
@@ -150,7 +148,11 @@ main {
   }
 
   .servicos {
-    gap: 2rem;
+    gap: 6rem;
+  }
+
+  .botao__servico{
+    align-items: center;
   }
 }
 
@@ -180,161 +182,42 @@ main {
 }
 
 @media (max-width: 1024px) {
-  .inicio h2 {
-    font-size: 2rem;
-  }
-
-  .opcoes img {
-    max-width: 17rem;
-  }
-
-  .opcoes {
-    gap: 5rem;
-  }
-
-  .botao__servico {
-    max-width: 13rem;
-    max-height: 12rem;
-    gap: 0;
-  }
-
-  .botao__servico img {
-    max-width: 4rem;
-  }
-
   .servicos {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(13rem, 1fr)
-    ); /* diminui um pouco as colunas p/ caber legal */
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     gap: 1rem;
-  }
-}
-
-@media (max-width: 848px) {
-  .opcoes img {
-    max-width: 17rem;
+    margin: 3rem auto; /* Garante a centralização */
   }
 }
 
 @media (max-width: 662px) {
-  .opcoes img {
-    max-width: 12rem;
-  }
-
-  .opcoes {
-    gap: 3rem;
-  }
-
-  .inicio h2 {
-    font-size: 1.6rem;
-  }
   .servicos {
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 1rem;
+    margin: 3rem auto; /* Garante a centralização */
   }
 }
 
-@media (max-width: 600px) {
-  .opcao img {
-    max-width: 20rem;
-  }
-
-  .inicio h2 {
-    font-size: 1.8rem;
-    padding: 3rem 3rem 0;
-    margin: 0;
-  }
-
-  .botao__servico {
-    gap: 0;
-  }
-
-  .botao__servico h3 {
-    min-height: auto;
-    font-size: 2rem;
-    padding: 1rem;
-  }
-
-  .botao__servico h3.titulopadilha {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 512px) {
-  .titulopadilha {
-    padding: 0;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .opcao img {
-    max-width: 15rem;
-  }
-
-  .inicio h2 {
-    font-size: 1.8rem;
-    padding: 3rem;
-  }
-
-  .inicio {
-    margin-left: 4rem;
-  }
-}
-
-@media (max-width: 412px) {
-  .inicio {
-    margin-left: 2.7rem;
-  }
-
+@media (max-width: 430px) {
   .servicos {
     gap: 4rem;
-    margin-left: 1.6rem;
+    margin: 3rem auto; /* Garante a centralização */
   }
 
-  .titulopadilha {
-    font-size: 1rem;
+  .inicio h2{
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  .inicio{
+    padding: 2rem;
   }
 }
 
 @media (max-width: 320px) {
-  .opcao img {
-    max-width: 10rem;
-  }
-
-  .inicio h2 {
-    font-size: 1.3rem;
-    padding: 3rem 3rem 2rem;
-  }
-
-  .inicio {
-    margin-left: 2.2rem;
-  }
-
-  .botao__servico {
-    width: 100%;
-    max-width: 8rem;
-    min-height: auto;
-    padding: 1rem;
-  }
-
-  .botao__servico img {
-    width: 3rem;
-    height: auto;
-  }
-
-  .botao__servico h3 {
-    min-height: auto;
-    font-size: 1.2rem;
-  }
-
   .servicos {
-    margin-left: 3.3rem;
     margin-top: 0;
-  }
-
-  .botao__servico h3.titulopadilha {
-    font-size: 1.2rem;
+    margin-left: auto; /* Remove margem esquerda */
+    margin-right: auto; /* Centraliza */
+    gap: 1rem;
   }
 }

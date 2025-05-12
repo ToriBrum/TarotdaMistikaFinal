@@ -15,15 +15,9 @@ section {
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 1024px){
   body{
-    background-image: url("../assets/rosa-fundo-buque-mobile.png");
-    background-attachment: scroll;
-  }
-}
-@media (max-width: 480px){
-  body{
-    background-image: url("../assets/rosa-fundo-buque-mobile.png");
+    background-image: url("../assets/fundo-teste.png");
     background-attachment: scroll;
   }
 }
