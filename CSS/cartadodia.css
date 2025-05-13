@@ -15,11 +15,13 @@
   text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.85)
 }
 
-.inicio{
+.cartadodia{
   border: 2px solid var(--vermelho);
   border-radius: 0.75rem;
   background-color: rgba(0, 0, 0, 0.85);
   animation: pulse-border 5s infinite;
+  width: 70%;
+  margin: 3% auto;
 }
 
 /* === CONTAINER DA CARTA + MENSAGEM === */
@@ -126,7 +128,7 @@
   padding: 1rem 1.5rem;
   line-height: 1.6;
   height: 10rem;
-  font-family: var(--fonte-destaque);
+  font-family: var(--fonte-secundaria);
   color: var(--branco);
   background: rgba(41, 0, 0, 0.4);
   backdrop-filter: blur(10px) saturate(150%);
