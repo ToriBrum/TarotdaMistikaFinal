@@ -8,9 +8,9 @@
 /* Título e texto */
 .titulo__servicos {
   font-family: var(--fonte-titulo);
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  margin-bottom: 1rem;
+  font-size: 4rem;
   text-align: center;
+  padding:3rem;
 }
 
 .texto__servicos {
@@ -75,5 +75,21 @@
   .cartas__exclusivo img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .texto__servicos {
+    padding: 0 1rem 2rem;
+  }
+
+  .cartas__exclusivo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .titulo__servicos{
+    font-size: 4rem;
+    margin-bottom: 2rem;
   }
 }

@@ -1,96 +1,138 @@
-/* === Caixa geral (ajustada) === */
+@import url("main.css");
+
+/* ===== Estilo brutalista refinado V2 (ajustado para o botão com imagem) ===== */
+
+/* Container geral */
 .ask-box {
-  margin: clamp(1rem, 3%, 2rem) auto;
   display: flex;
-  flex-direction: row; /* Mantém as colunas na horizontal */
-  justify-content: center;
-  align-items: center;
-  gap: 2rem; /* Espaço entre imagem e caixa de interação */
-  flex-wrap: wrap; /* Para telas menores */
-  max-width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 90%;
+  margin: 3rem auto;
+  padding: 2rem;
+  position: relative;
+  border: 2px solid var(--vermelho);
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  animation: pulse-border 5s infinite;
 }
 
-/* === Título === */
+/* Animação da borda */
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0px var(--vermelho);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--vermelho);
+  }
+  100% {
+    box-shadow: 0 0 0px var(--vermelho);
+  }
+}
+
+/* Título */
 .ask-box h2 {
-  margin: 3rem;
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  width: 100%;
   text-align: center;
+  font-family: var(--fonte-secundaria);
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--branco);
+  margin-bottom: 2rem;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.85)
 }
 
-/* === Container de Input e Botão (novo) === */
-.ask-box .input-container {
+/* Imagem lado esquerdo (sem limitar tamanho) */
+.ask-box .imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
+}
+
+/* Caixa de interação lado direito */
+.ask-box .prompt {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; /* Espaço entre o input e o botão */
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(116, 1, 24, 0.3); /* Borda do container */
-  background-color: rgba(77, 2, 2, 0.2); /* Fundo suave */
-  width: 100%;
+  align-items: stretch;
+  flex: 1;
+  gap: 1rem;
+  min-width: 10rem;
 }
 
-/* === Imagem principal (lado esquerdo) === */
-.ask-box img {
-  width: clamp(14rem, 50vw, 20rem);
-  height: auto;
-  margin: 0;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efeito de sombra na imagem */
-}
-
-/* === Input de texto (lado direito) === */
+/* Input de texto */
 .ask-box input[type="text"] {
-  padding: 0.4rem 0.6rem;
-  width: clamp(70%, 80%, 60%);
-  height: 10rem;
+  padding: 0.6rem 1rem;
   border-radius: 6px;
-  border: 2px solid var(--vermelho-claro);
-  font-size: clamp(1rem, 3vw, 1.2rem);
+  border: 2px solid var(--vermelho);
+  background-color: #111;
+  color: var(--branco);
+  font-size: 1.1rem;
   font-family: var(--fonte-titulo);
-  transition: border-color 0.2s ease;
-  box-shadow: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+  height: 10rem;
 }
 
-/* === Foco no input === */
+.ask-box input[type="text"]::placeholder {
+  color: #999;
+}
+
 .ask-box input[type="text"]:focus {
   outline: none;
-  border-color: var(--vermelho);
+  border-color: var(--vermelho-claro);
+  background-color: #222;
 }
 
-/* === Botão revelar (imagem clicável) === */
 .botao-revelar {
-  background: none;
-  border: none;
-  padding: 0;
-  margin-top: 0.5rem; /* Grudadinho no input */
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.botao-revelar img {
-  height: auto;
-  width: clamp(10rem, 40vw, 18rem);
-  max-width: 100%;
-  border-radius: 0.5rem;
-}
-
-.botao-revelar:hover img {
-  transform: scale(1.05);
-}
-
-/* === Resposta (mensagem) === */
-.response {
-  margin: 1.5rem 4rem 3rem;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-image: url('../assets/borda-botao.png');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--preto);
   color: var(--branco);
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+  font-family: var(--fonte-secundaria);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  border: 2px solid var(--vermelho);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Efeito ao passar o mouse */
+.botao-revelar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px var(--vermelho);
+}
+
+/* Efeito ao clicar */
+.botao-revelar:active {
+  transform: scale(0.98);
+}
+
+
+/* Área da resposta */
+.response {
+  margin: 2rem auto 0;
+  padding: 1.5rem 2rem;
+  background-color: rgba(124, 0, 0, 0.95);
+  color: var(--branco);
+  border: 1px solid var(--vermelho);
+  border-radius: 0.5rem;
+  font-family: var(--fonte-principal);
   font-style: italic;
-  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
   opacity: 0;
   transform: translateY(15px);
@@ -98,27 +140,25 @@
   max-width: 90%;
 }
 
-/* Classe para ativar o fade-up */
+/* Mostra resposta com fade-up */
 .response.mostrar {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* === Responsividade mais fina (mobile) === */
-@media (max-width: 480px) {
-  .ask-box input[type="text"] {
-    width: 90%;
+/* Responsivo — empilha imagem e prompt */
+@media (max-width: 900px) {
+  .ask-box {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .response {
-    font-size: 1rem;
-    padding: 0.6rem 0.8rem;
+  .ask-box .imagem img {
+    width: 100%;
+    height: auto;
   }
-}
 
-
-@media (max-width: 320px){
-  .inicio h2{
-    margin-bottom: 0;
+  .ask-box .prompt {
+    width: 100%;
   }
 }
